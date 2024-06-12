@@ -37,7 +37,7 @@ include "../include/html.php";
                 ?>" alt="" style="width:100%;height:1000px">
                 <div class="card-body">
                     <h4 class="card-title"><?php echo $row["titulo"] ?></h4>
-                    <p class="card-text">Precio: <?php echo $row["precio"] ?></p>
+                    <p class="card-text"><?php echo $row["precio"] ?> €</p>
                     <p class="card-text">Plataforma: <?php echo $row["nombre"] ?></p>
                 </div>
                 <div class="d-flex flex-row-reverse mb-3">

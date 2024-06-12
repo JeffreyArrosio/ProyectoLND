@@ -28,7 +28,7 @@ function eventos() {
 
 function agregar(evento) {
     if (evento.target.classList.contains("btn-success")) {
-        const seleccion = evento.target.parentElement.parentElement
+        const seleccion = evento.target.parentElement.parentElement.parentElement
         verProducto(seleccion)
     }else{
         console.log("no manito")
@@ -37,8 +37,8 @@ function agregar(evento) {
 
 function verProducto(prod) {
     const infoProd = {
-        Nombre: prod.querySelector("h4.card-title").textContent,
-        precio: parseFloat(prod.querySelector("h4.card-title + p").textContent),
+        nombre: prod.querySelector("h4").textContent,
+        precio: parseFloat(prod.querySelector("h4 + p").textContent),
         cantidad: 1,
         id: prod.querySelector("button").getAttribute("data-id"),
     }
@@ -59,8 +59,8 @@ function verProducto(prod) {
 
 function borrarProducto(evento) {
     if (evento.target.classList.contains("borrarLinea")) {
-        const prodID = e.target.getAttribute("data-id")
-        compra = compra.filter(prod => prod.id !== prodID)
+        const prodID = evento.target.getAttribute("data-id")
+        carrito = carrito.filter(prod => prod.id !== prodID)
         carritoHTML()
     }
 }

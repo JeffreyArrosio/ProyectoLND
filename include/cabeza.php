@@ -12,83 +12,32 @@ $cons = $mysql->query("SELECT * FROM plataformas");
                 <button type="button" class="btn-close bg-danger" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
-                <?php
-                $carritoV = $mysql->query("SELECT * from compra_video where id_usu =" . $_SESSION["id"]);
-                $carritoP = $mysql->query("SELECT * from compra_equipo where id_usu =" . $_SESSION["id"]);
-                $carritoC = $mysql->query("SELECT * from compra_compo where id_usu =" . $_SESSION["id"]);
-                if ($carritoV->num_rows == 0 and $carritoP->num_rows == 0 and $carritoC->num_rows == 0) {
-                    ?>
-                    <img class="img-fluid" src="../imagenes/carritoVacio.png" alt="Vacio">
-                    <p class="display-5 text-center">Carrito vacio</p>
-                    <?php
-                } else {
-                    $total = 0;
-                    $precioT = 0;
-                    while ($carro = $carritoV->fetch_assoc()) {
-                        $vj = $mysql->query("SELECT * from videojuegos where id =" . $carro["id_video"]);
-                        $vprecio = $mysql->query("SELECT precio from tiene where id_video =" . $carro["id_video"] . " AND id_plat =" . $carro["id_plat"]);
-                        $vj = $vj->fetch_assoc();
-                        $vprecio = $vprecio->fetch_assoc();
-                        ?>
-                        <img class="rounded" src="<?php echo $vj["portada"] ?>" alt="portada" width="100%" height="200px">
-                        <div class="mb-3">
-                            <p><?php echo $vj["titulo"] ?></p>
-                            <span><?php echo $vprecio["precio"] ?>€</span>
-                            <span>x <?php echo $carro["cantidad"] ?></span>
-                            <p>Total: <?php
-                            $tmp = $vprecio["precio"] * $carro["cantidad"];
-                            echo $tmp;
-                            ?>€</p>
-                        </div>
-                        <?php
-                        $total = $total + $carro["cantidad"];
-                        $precioT = $precioT + $tmp;
-                    }
-                    while ($carro = $carritoP->fetch_assoc()) {
-                        $pt = $mysql->query("SELECT * from plataformas where id =" . $carro["id_plat"]);
-                        $pt = $pt->fetch_assoc();
-                        ?>
-                        <img class="rounded" src="<?php echo $pt["imagen"] ?>" alt="portada" width="100%" height="200px">
-                        <div class="mb-3">
-                            <p><?php echo $pt["nombre"] ?></p>
-                            <span><?php echo $pt["precio"] ?>€</span>
-                            <span>x <?php echo $carro["cantidad"] ?></span>
-                            <p>Total: <?php
-                            $tmp = $carro["cantidad"] * $pt["precio"];
-                            echo $tmp ?>€</p>
-                        </div>
-                        <?php
-                        $total = $total + $carro["cantidad"];
-                        $precioT = $precioT + $tmp;
-                    }
-                    while ($carro = $carritoC->fetch_assoc()) {
-                        $cp = $mysql->query("SELECT * from componentes where id =" . $carro["id_compo"]);
-                        $cp = $cp->fetch_assoc();
-                        ?>
-                        <img class="rounded" src="<?php echo $cp["imagen"] ?>" alt="portada" width="100%" height="200px">
-                        <div class="mb-3">
-                            <p><?php echo $cp["nombre"] ?></p>
-                            <span><?php echo $cp["precio"] ?>€</span>
-                            <span>x <?php echo $carro["cantidad"] ?></span>
-                            <p>Total: <?php
-                            $tmp = $carro["cantidad"] * $cp["precio"];
-                            echo $tmp ?>€</p>
-                        </div>
-                        <?php
-                        $total = $total + $carro["cantidad"];
-                        $precioT = $precioT + $tmp;
-                    }
-                    ?>
-                    <p class="h2 mb-5">Nº de productos: <?php echo $total ?></p>
-                    <p class="h2 mb-5">Precio: <?php echo $precioT ?>€</p>
-                    <div class="btn-group">
-                        <a href="carrito.php"><button type="button" class="btn btn-outline-success">Confirmar carrito</button></a>
-                        <a href="../check/checkConfirmar.php?confirmar=no"><button type="button"
-                                class="btn btn-outline-danger">Borrar carrito</button></a>
-                    </div>
-                    <?php
-                }
-                ?>
+                <table id="lista" class="table text-center">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Total</th>
+                            <th>Borrar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpoTabla">
+
+                    </tbody>
+                </table>
+                <div class="btn-group-vertical">
+                    <a href="" ><button type="button" class="btn btn-outline-success">Confirmar
+                            carrito</button></a>
+                    <a href="" id="borrar"><button type="button"
+                            class="btn btn-outline-danger">Borrar carrito</button></a>
+                    <a href="" id="descargar"><button type="button" class="btn btn-outline-secondary">Descargar
+                            carrito</button></a>
+                    <a href="" id="cargarEquipo"><button type="button" class="btn btn-outline-primary">Cargar
+                            carrito desde tu equipo</button></a>
+                    <input type="file" id="archivo">
+                    <pre id="contenido"></pre>
+                </div>
             </div>
         </div>
         <?php

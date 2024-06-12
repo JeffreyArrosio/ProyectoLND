@@ -26,9 +26,9 @@ include "../include/html.php";
 <body>
     <?php include '../include/cabeza.php'; ?>
     <main class="container-fluid">
-        <section class="row justify-content-center">
+        <section class="row justify-content-center" id="producto">
             <h2 class="display-1 text-center"><?php echo $row["titulo"] ?></h2>
-            <span class="card mb-5" style="width:800px">
+            <span class="card mb-5" style="width:800px" >
                 <img class="card-img-top" src="<?php if ($row["portada"] == "") {
                     echo "https://www.stargeek.es/2798-large_default/sudadera-super-mario-bros-bloque-interrogante-.jpg";
                 } else {
@@ -37,8 +37,8 @@ include "../include/html.php";
                 ?>" alt="" style="width:100%;height:1000px">
                 <div class="card-body">
                     <h4 class="card-title"><?php echo $row["titulo"] ?></h4>
-                    <p class="card-text">Plataforma: <?php echo $row["nombre"] ?></p>
                     <p class="card-text">Precio: <?php echo $row["precio"] ?></p>
+                    <p class="card-text">Plataforma: <?php echo $row["nombre"] ?></p>
                 </div>
                 <div class="d-flex flex-row-reverse mb-3">
                     <?php
@@ -79,21 +79,7 @@ include "../include/html.php";
                         } elseif (isset($_SESSION["id"]) and $compra["tipo"] == "cliente") {
                             ?>
                             <div class="d-flex flex-row-reverse mb-3">
-                                <form action="../check/checkCompra.php?tipo=juegos&id=<?php echo $row["id"]?>&plataforma=<?php echo $plataforma?>" method="post">
-                                    <label for="cant">Cantidad:</label><br>
-                                    <input type="number" id="cant" name="cant" min="1" max="<?php
-                                    if ($row["cantidad"] > 0) {
-                                        echo $row["cantidad"];
-                                    } else {
-                                        echo "1";
-                                    }
-                                    ?>" value="1"><br>
-                                    <button type="sumbit" class="btn btn-success" <?php
-                                    if ($row["cantidad"] <= 0) {
-                                        echo "disabled";
-                                    }
-                                    ?>>Añadir al carro +</button>
-                                </form>
+                                <button class="btn btn-success" data-id="V<?php echo $row["id"] ?>">Añadir al carrito +</button>
                             </div>
                             <?php
                         }
@@ -104,6 +90,7 @@ include "../include/html.php";
         </section>
     </main>
     <?php include "../include/pie.php" ?>
+    <script src="../js/carrito.js"></script>
 </body>
 
 </html>

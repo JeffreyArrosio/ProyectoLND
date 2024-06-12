@@ -44,7 +44,7 @@ include "../include/html.php";
 <body>
     <?php include '../include/cabeza.php'; ?>
     <main class="container-fluid">
-        <section class="row justify-content-center">
+        <section class="row justify-content-center" id="producto">
             <?php
             switch ($tipo) {
                 case 'juegos':
@@ -68,9 +68,7 @@ include "../include/html.php";
                             } else {
                                 while ($rowC = $console->fetch_assoc()) {
                                     ?><span><a class="text-decoration-none text-success"
-                                            href="compra.php?tipo=juegos&id=<?php echo $rowC["v_id"] ?>&plataforma=<?php echo $rowC["p_id"] ?>"><?php
-                                                  echo $rowC["nombre"] . "&nbsp";
-                                                  ?></a></span>
+                                            href="compra.php?tipo=juegos&id=<?php echo $rowC["v_id"] ?>&plataforma=<?php echo $rowC["p_id"] ?>"><?php echo $rowC["nombre"] . "&nbsp"; ?></a></span>
                                     <?php
                                 }
                             }
@@ -109,7 +107,7 @@ include "../include/html.php";
                                         class="btn btn-danger">Borrar</button></a>
                             </div>
                             <?php
-                        } 
+                        }
                         ?>
                     </span>
                     <?php
@@ -134,39 +132,25 @@ include "../include/html.php";
                                 echo "No disponible";
                             }
                             ?></p>
+                            <?php
+                            if (isset($_SESSION["id"]) and $persona["tipo"] == "admin") {
+                                ?>
+                                <div class="btn-group d-flex justify-content-center mt-3 mb-3">
+                                    <a href="modificar.php?tipo=plataformas&id=<?php echo $id ?>"><button type="button"
+                                            class="btn btn-warning">Modificar</button></a>
+                                    <a href="borrar.php?tipo=plataformas&id=<?php echo $id ?>"><button type="button"
+                                            class="btn btn-danger">Borrar</button></a>
+                                </div>
+                                <?php
+                            } elseif (isset($_SESSION["id"]) and $persona["tipo"] == "cliente") {
+                                ?>
+                                <div class="d-flex flex-row-reverse mb-3">
+                                    <button class="btn btn-success" data-id="P<?php echo $row["id"] ?>">Añadir al carrito +</button>
+                                </div>
+                                <?php
+                            }
+                            ?>
                         </div>
-                        <?php
-                        if (isset($_SESSION["id"]) and $persona["tipo"] == "admin") {
-                            ?>
-                            <div class="btn-group d-flex justify-content-center mt-3 mb-3">
-                                <a href="modificar.php?tipo=plataformas&id=<?php echo $id ?>"><button type="button"
-                                        class="btn btn-warning">Modificar</button></a>
-                                <a href="borrar.php?tipo=plataformas&id=<?php echo $id ?>"><button type="button"
-                                        class="btn btn-danger">Borrar</button></a>
-                            </div>
-                            <?php
-                        } elseif (isset($_SESSION["id"]) and $persona["tipo"] == "cliente") {
-                            ?>
-                            <div class="d-flex flex-row-reverse mb-3">
-                                <form action="../check/checkCompra.php?tipo=plataformas&id=<?php echo $row["id"]?>" method="post">
-                                    <label for="cant">Cantidad:</label><br>
-                                    <input type="number" id="cant" name="cant" min="1" max="<?php
-                                    if ($row["cantidad"] > 0) {
-                                        echo $row["cantidad"];
-                                    } else {
-                                        echo "1";
-                                    }
-                                    ?>" value="1"><br>
-                                    <button type="sumbit" class="btn btn-success" <?php
-                                    if ($row["cantidad"] <= 0) {
-                                        echo "disabled";
-                                    }
-                                    ?>>Añadir al carro +</button>
-                                </form>
-                            </div>
-                            <?php
-                        }
-                        ?>
                     </span>
                     <?php
                     break;
@@ -182,8 +166,8 @@ include "../include/html.php";
                         ?>" alt="" style="width:100%;height:1200px">
                         <div class="card-body">
                             <h4 class="card-title"><?php echo $row["nombre"] ?></h4>
-                            <p class="card-text">Familia: <?php echo $row["tipo"] ?></p>
                             <p class="card-text">Precio: <?php echo $row["precio"] ?> €</p>
+                            <p class="card-text">Familia: <?php echo $row["tipo"] ?></p>
                             <p class="card-text">Stock: <?php
                             if ($row["cantidad"] > 0) {
                                 echo "En stock";
@@ -191,39 +175,26 @@ include "../include/html.php";
                                 echo "No disponible";
                             }
                             ?></p>
+                            <?php
+                            if (isset($_SESSION["id"]) and $persona["tipo"] == "admin") {
+                                ?>
+                                <div class="btn-group d-flex justify-content-center mt-3 mb-3">
+                                    <a href="modificar.php?tipo=componentes&id=<?php echo $id ?>"><button type="button"
+                                            class="btn btn-warning">Modificar</button></a>
+                                    <a href="borrar.php?tipo=componentes&id=<?php echo $id ?>"><button type="button"
+                                            class="btn btn-danger">Borrar</button></a>
+                                </div>
+                                <?php
+                            } elseif (isset($_SESSION["id"]) and $persona["tipo"] == "cliente") {
+                                ?>
+                                <div class="d-flex flex-row-reverse mb-3">
+                                    <button class="btn btn-success" data-id="C<?php echo $row["id"] ?>">Añadir al carrito +</button>
+                                </div>
+                                <?php
+                            }
+                            ?>
                         </div>
-                        <?php
-                        if (isset($_SESSION["id"]) and $persona["tipo"] == "admin") {
-                            ?>
-                            <div class="btn-group d-flex justify-content-center mt-3 mb-3">
-                                <a href="modificar.php?tipo=componentes&id=<?php echo $id ?>"><button type="button"
-                                        class="btn btn-warning">Modificar</button></a>
-                                <a href="borrar.php?tipo=componentes&id=<?php echo $id ?>"><button type="button"
-                                        class="btn btn-danger">Borrar</button></a>
-                            </div>
-                            <?php
-                        } elseif (isset($_SESSION["id"]) and $persona["tipo"] == "cliente") {
-                            ?>
-                            <div class="d-flex flex-row-reverse mb-3">
-                                <form action="../check/checkCompra.php?tipo=componentes&id=<?php echo $row["id"]?>" method="post">
-                                    <label for="cant">Cantidad:</label><br>
-                                    <input type="number" id="cant" name="cant" min="1" max="<?php
-                                    if ($row["cantidad"] > 0) {
-                                        echo $row["cantidad"];
-                                    } else {
-                                        echo "1";
-                                    }
-                                    ?>" value="1"><br>
-                                    <button type="sumbit" class="btn btn-success" <?php
-                                    if ($row["cantidad"] <= 0) {
-                                        echo "disabled";
-                                    }
-                                    ?>>Añadir al carro +</button>
-                                </form>
-                            </div>
-                            <?php
-                        }
-                        ?>
+
                     </span>
                     <?php
                     break;
@@ -232,6 +203,7 @@ include "../include/html.php";
         </section>
     </main>
     <?php include "../include/pie.php" ?>
+    <script src="../js/carrito.js"></script>
 </body>
 
 </html>

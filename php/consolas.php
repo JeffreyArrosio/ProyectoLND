@@ -55,6 +55,7 @@ if (!isset($_GET["filtro"])) {
             ?>
         </section>
         <?php include "../include/pie.php" ?>
+        <script src="../js/carrito.js"></script>
 </body>
 
 </html>

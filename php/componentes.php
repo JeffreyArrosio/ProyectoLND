@@ -73,6 +73,7 @@ include "../include/ordenCompo.php"
             ?>
         </section>
         <?php include "../include/pie.php" ?>
+        <script src="../js/carrito.js"></script>
     </main>
 </body>
 

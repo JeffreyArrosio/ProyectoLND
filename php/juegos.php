@@ -133,6 +133,7 @@ $conso = $mysql->query("SELECT * FROM plataformas");
         </section>
     </main>
     <?php include "../include/pie.php" ?>
+    <script src="../js/carrito.js"></script>
 </body>
 
 </html>

@@ -110,6 +110,7 @@ $compo = $mysql->query("SELECT * FROM componentes");
         </section>
     </main>
     <?php include "../include/pie.php" ?>
+    <script src="../js/carrito.js"></script>
 </body>
 
 </html>

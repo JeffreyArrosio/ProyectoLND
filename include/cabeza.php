@@ -6,28 +6,29 @@ $cons = $mysql->query("SELECT * FROM plataformas");
     <?php
     if (isset($_SESSION["id"])) {
         ?>
-        <div class="offcanvas offcanvas-end" id="carro">
+        <div class="offcanvas offcanvas-end " id="carro">
             <div class="offcanvas-header">
                 <h1 class="offcanvas-title">Su carrito</h1>
                 <button type="button" class="btn-close bg-danger" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
-                <table id="lista" class="table text-center">
+                <table id="lista" class="table table-dark text-center table-striped">
                     <thead>
                         <tr>
                             <th>Nombre</th>
                             <th>Precio</th>
                             <th>Cantidad</th>
                             <th>Total</th>
+                            <th>Aumentar</th>
+                            <th>Reducir</th>
                             <th>Borrar</th>
                         </tr>
                     </thead>
                     <tbody id="cuerpoTabla">
-
                     </tbody>
                 </table>
                 <div class="btn-group-vertical">
-                    <a href="" ><button type="button" class="btn btn-outline-success">Confirmar
+                    <a href="../php/carrito.php" ><button type="button" class="btn btn-outline-success">Confirmar
                             carrito</button></a>
                     <a href="" id="borrar"><button type="button"
                             class="btn btn-outline-danger">Borrar carrito</button></a>
@@ -85,7 +86,7 @@ $cons = $mysql->query("SELECT * FROM plataformas");
                                 data-bs-toggle="dropdown" aria-expanded="false"><?php echo $usu["nombre"] ?></button>
                             <ul class="dropdown-menu">
                                 <li><button class="dropdown-item btn" data-bs-toggle="offcanvas"
-                                        data-bs-target="#carro">Carrito</button></li>
+                                        data-bs-target="#carro">Carrito <span class="badge bg-success" id="numero"></span></button></li>
                                 <li class="d-grid gap-2">
                                     <a class="text-decoration-none text-light" href="logout.php"><button type="button"
                                             class="btn btn-danger "><svg xmlns="http://www.w3.org/2000/svg" width="16"

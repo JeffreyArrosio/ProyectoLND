@@ -79,7 +79,7 @@ include "../include/html.php";
                         } elseif (isset($_SESSION["id"]) and $compra["tipo"] == "cliente") {
                             ?>
                             <div class="d-flex flex-row-reverse mb-3">
-                                <button class="btn btn-success" data-id="V<?php echo $row["id"] ?>">Añadir al carrito +</button>
+                                <button class="btn btn-success" data-id="V<?php echo $row["id"] ?>P<?php echo $plataforma?>">Añadir al carrito +</button>
                             </div>
                             <?php
                         }

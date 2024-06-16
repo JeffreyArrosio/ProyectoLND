@@ -24,7 +24,7 @@ if (!isset($_GET["filtro"])) {
     <main class="container-fluid" data-bs-theme="dark">
         <?php include '../include/cookies.php'; ?>
         <div class="nav-item dropdown text-center">
-            <button class="dropdown-toggle btn text-light" href="juegos.php" data-bs-toggle="dropdown"
+            <button class="dropdown-toggle btn" href="juegos.php" data-bs-toggle="dropdown"
                 aria-expanded="false">Ordenar por: </button>
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="consolas.php?filtro=nombreA">Nombre (a-z)</a></li>
@@ -37,7 +37,7 @@ if (!isset($_GET["filtro"])) {
             <?php
             while ($row = $plat->fetch_assoc()) {
                 ?>
-                <span class="card" style="width:400px">
+                <span class="card animacion" style="width:400px">
                     <a href="vista.php?tipo=consolas&id=<?php echo $row["id"] ?>">
                         <img class="card-img-top" src="<?php if ($row["imagen"] == "") {
                             echo "https://www.stargeek.es/2798-large_default/sudadera-super-mario-bros-bloque-interrogante-.jpg";
@@ -55,9 +55,12 @@ if (!isset($_GET["filtro"])) {
             }
             ?>
         </section>
-        <?php include "../include/pie.php" ?>
-        <script src="../js/carrito.js"></script>
-        <script src="../js/cookies.js"></script>
+    </main>
+    <?php include "../include/pie.php" ?>
+    <script src="../js/carrito.js"></script>
+    <script src="../js/cookies.js"></script>
+    <script src="../js/dark.js"></script>
+    <script src="../js/animation.js"></script>
 </body>
 
 </html>

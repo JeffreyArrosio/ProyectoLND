@@ -20,11 +20,9 @@ include "../include/html.php";
 
         </div>
         <h1 id="total"></h1>
-        <div class="btn-group"id="borrar">
-            <a href="index.php?carrito=1" ><button type="button"
-                    class="btn btn-outline-success">Comprar</button></a>
-            <a href="index.php" ><button type="button"
-                    class="btn btn-outline-danger">Cancelar Compra</button></a>
+        <div class="btn-group" id="borrar">
+            <a href="index.php?carrito=1"><button type="button" class="btn btn-outline-success">Comprar</button></a>
+            <a href="index.php"><button type="button" class="btn btn-outline-danger">Cancelar Compra</button></a>
         </div>
         <p class="mt-4"><a href="index.php"><button type="button" class="btn btn-outline-primary">Volver al
                     inicio</button></a></p>
@@ -35,7 +33,7 @@ include "../include/html.php";
     <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
+    <script src="../js/dark.js"></script>
 </body>
 
 </html>

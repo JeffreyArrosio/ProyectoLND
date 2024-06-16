@@ -93,6 +93,7 @@ include "../include/html.php";
     <?php include "../include/pie.php" ?>
     <script src="../js/carrito.js"></script>
     <script src="../js/cookies.js"></script>
+    <script src="../js/dark.js"></script>
 </body>
 
 </html>

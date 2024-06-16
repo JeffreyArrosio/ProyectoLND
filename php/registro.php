@@ -17,11 +17,13 @@ include "../include/html.php";
                 <label for="usuario">Usuario</label>
             </div>
             <div class="form-floating">
-                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com"
+                    required>
                 <label for="email">Email</label>
             </div>
             <div class="form-floating">
-                <input type="email" class="form-control" id="cemail" name="cemail" placeholder="name@example.com" required>
+                <input type="email" class="form-control" id="cemail" name="cemail" placeholder="name@example.com"
+                    required>
                 <label for="cemail">Comfirmar Email</label>
             </div>
             <div class="form-floating">
@@ -29,7 +31,7 @@ include "../include/html.php";
                 <label for="pass">Contraseña</label>
             </div>
             <div class="form-floating">
-                <input type="password" class="form-control" id="cpass" name="cpass" placeholder="Password"required>
+                <input type="password" class="form-control" id="cpass" name="cpass" placeholder="Password" required>
                 <label for="cpass">Confirmar Contraseña</label>
             </div>
 
@@ -52,7 +54,7 @@ include "../include/html.php";
                     No se puede crear una cuenta con un correo ya usado
                 </div>
                 <?php
-            } 
+            }
         }
         ?>
     </main>
@@ -61,7 +63,7 @@ include "../include/html.php";
     <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
+    <script src="../js/dark.js"></script>
 </body>
 
 </html>

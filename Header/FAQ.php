@@ -28,5 +28,6 @@ include "../include/html.php";
     </main>
     <?php include "../include/pie.php" ?>
     <script src="../js/cookies.js"></script>
+    <script src="../js/dark.js"></script>
 </body>
 </html>

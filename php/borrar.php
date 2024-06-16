@@ -46,7 +46,8 @@ include "../include/html.php";
             <a href="admin.php"><button class="btn btn-danger btn-lg">No</button></a>
         </div>
     </main>
-    <?php include "../include/pie.php" ?>  
+    <?php include "../include/pie.php" ?> 
+    <script src="../js/dark.js"></script>
 </body>
 
 

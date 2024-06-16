@@ -2,36 +2,43 @@ html,
 body {
     height: 100%;
     margin: 0;
-    background-color: rgb(32, 0, 64);
-
+    font-family: "Tiny5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 body {
     display: flex;
     flex-direction: column;
+    background-color: rgb(1, 8, 0);
 }
 
 main {
-    background-color: rgb(32, 0, 64);
+    background-color: rgb(1, 8, 0);
     color: white;
 }
 
-strong{
-    color: rgb(5, 243, 73) !important;
+strong {
+    color: rgb(4, 159, 48) !important;
 }
+
 h2 {
-    color: rgb(5, 243, 73) !important;
+    color: rgb(4, 159, 48) !important;
 }
-#cookie{
-    background-color: rgb(32, 0, 64);
+
+#cookie {
+    background-color: rgb(1, 8, 0);
 }
-#botones{
+
+#botones {
     bottom: 0px;
 }
-#oscuro{
+
+#oscuro {
     cursor: pointer;
 }
-.modal-content{
+
+.modal-content {
     min-height: 400px;
     width: 100%;
 }
@@ -53,18 +60,18 @@ h2 {
 }
 
 .card-title {
-    color: rgb(5, 243, 73) !important;
+    color: rgb(4, 159, 48) !important;
 }
 
 .offcanvas {
-    background-color: rgb(32, 0, 64);
+    background-color: rgb(1, 8, 0);
     color: white;
 }
 
 .card {
-    background-color: rgb(32, 0, 64);
+    background-color: rgb(1, 8, 0);
     color: white;
-    border: 2px solid rgb(68, 1, 84) !important;
+    border: 2px solid rgb(4, 159, 48) !important;
 }
 
 .navbar {
@@ -95,4 +102,16 @@ h2 {
     width: 300px;
     opacity: 1;
     filter: contrast(120%);
+}
+
+.animacion img {
+    transition: transform 0.3s ease;
+
+}
+
+.animacion img.agrandar {
+    transform: scale(1.3);
+    /* Tamaño al agrandarse */
+    position: absolute;
+    z-index: 2000;
 }

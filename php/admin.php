@@ -197,6 +197,7 @@ $compo = $mysql->query("SELECT * FROM componentes");
     </main>
     <?php include "../include/pie.php" ?>
     <script href="../js/cookies.js"></script>
+    <script src="../js/dark.js"></script>
 </body>
 
 </html>

@@ -8,6 +8,7 @@
         <a href="index.php"><button class="btn btn-success w-50 py-2 mt-3">Volver al inicio</button></a>
     </main>
     <?php include "../include/pie.php" ?>
+    <script src="../js/dark.js"></script>
 </body>
 
 </html>

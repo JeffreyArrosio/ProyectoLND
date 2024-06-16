@@ -151,6 +151,7 @@ include "../include/html.php";
         ?>
     </main>
     <?php include "../include/pie.php" ?>
+    <script src="../js/dark.js"></script>
 </body>
 
 </html>

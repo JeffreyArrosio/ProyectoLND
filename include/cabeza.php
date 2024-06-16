@@ -28,13 +28,13 @@ $cons = $mysql->query("SELECT * FROM plataformas");
                     </tbody>
                 </table>
                 <div class="btn-group-vertical">
-                    <a href="../php/carrito.php"><button type="button" class="btn btn-outline-success">Confirmar
-                            carrito</button></a>
-                    <a href="" id="borrar"><button type="button" class="btn btn-outline-danger">Borrar carrito</button></a>
-                    <a href="" id="descargar"><button type="button" class="btn btn-outline-secondary">Descargar
-                            carrito</button></a>
-                    <a href="" id="cargarEquipo"><button type="button" class="btn btn-outline-primary">Cargar
-                            carrito desde tu equipo</button></a>
+                    <a href="../php/carrito.php" class="btn btn-outline-success">Confirmar
+                        carrito</a>
+                    <a href="" id="borrar" class="btn btn-outline-danger">Borrar carrito</a>
+                    <a href="" id="descargar" class="btn btn-outline-secondary">Descargar
+                        carrito</a>
+                    <a href="" id="cargarEquipo" class="btn btn-outline-primary">Cargar
+                        carrito desde tu equipo</a>
                     <input type="file" id="archivo">
                     <pre id="contenido"></pre>
                 </div>
@@ -45,7 +45,7 @@ $cons = $mysql->query("SELECT * FROM plataformas");
     ?>
     <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a href="../php/index.php"><img src="../imagenes/videowebo.png" alt="" width="50px" height="50px"></a>
+            <a href="../php/index.php"><img src="../imagenes/videowebo.png" alt="switch" width=50 height=50></a>
             <span class="display-5"><a class="text-decoration-none text-light"
                     href="../php/index.php">IDEOWEBOS</a></span>
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
@@ -73,13 +73,13 @@ $cons = $mysql->query("SELECT * FROM plataformas");
                         <a href="../php/admin.php"><button type="button" class="btn btn-outline-light me-2"><?php
                         echo $usu["nombre"] . " (Zona " . $usu["tipo"] . ")";
                         ?></button></a>
-                        <a href="../php/logout.php"><button type="button" class="btn btn-danger"><svg
+                        <a href="../php/logout.php" class="btn btn-danger"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-power" viewBox="0 0 16 16">
                                     <path d="M7.5 1v7h1V1z" />
                                     <path
                                         d="M3 8.812a5 5 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812" />
-                                </svg></button></a>
+                                </svg></a>
                         <?php
                     } else {
                         ?>
@@ -118,8 +118,7 @@ $cons = $mysql->query("SELECT * FROM plataformas");
         </div>
     </div>
 </header>
-<nav class="navbar navbar-expand-lg bg-body-tertiary rounded mb-3" data-bs-theme="dark"
-    aria-label="Eleventh navbar example">
+<nav class="navbar navbar-expand-lg bg-body-tertiary  mb-3" data-bs-theme="dark" aria-label="Eleventh navbar example">
     <div class="container-fluid ">
         <a class="navbar-brand" href="../php/index.php">HOME</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09"

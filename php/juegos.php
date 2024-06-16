@@ -14,7 +14,7 @@ $conso = $mysql->query("SELECT * FROM plataformas");
     <main class="container-fluid" data-bs-theme="dark">
     <?php  include '../include/cookies.php';?>
         <div class="nav-item dropdown text-center">
-            <button class="dropdown-toggle btn text-light" href="juegos.php" data-bs-toggle="dropdown"
+            <button class="dropdown-toggle btn" href="juegos.php" data-bs-toggle="dropdown"
                 aria-expanded="false">Ordenar por: </button>
             <ul class="dropdown-menu">
                 <?php
@@ -37,7 +37,7 @@ $conso = $mysql->query("SELECT * FROM plataformas");
                 }
                 ?>
             </ul>
-            <button class="dropdown-toggle btn text-light" href="juegos.php" data-bs-toggle="dropdown"
+            <button class="dropdown-toggle btn" href="juegos.php" data-bs-toggle="dropdown"
                 aria-expanded="false">Flitrar plataforma: </button>
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="juegos.php">Todas</a></li>
@@ -58,7 +58,7 @@ $conso = $mysql->query("SELECT * FROM plataformas");
                     $precio = $mysql->query("SELECT precio from tiene inner join videojuegos on id_video = id where id_video =" . $row["id"]);
                     $console = $mysql->query("SELECT p.nombre from videojuegos v inner join tiene t on t.id_video = v.id inner join plataformas p on t.id_plat = p.id where t.id_video =" . $row["id"]);
                     ?>
-                    <span class="card" style="width:400px">
+                    <span class="card animacion" style="width:400px">
                         <a href="vista.php?tipo=juegos&id=<?php echo $row["id"] ?>">
                             <img class="card-img-top" src="<?php if ($row["portada"] == "") {
                                 echo "https://www.stargeek.es/2798-large_default/sudadera-super-mario-bros-bloque-interrogante-.jpg";
@@ -100,7 +100,7 @@ $conso = $mysql->query("SELECT * FROM plataformas");
                     $precio = $mysql->query("SELECT precio from tiene inner join videojuegos on id_video = id where id_video =" . $row["v_id"]);
                     $console = $mysql->query("SELECT p.nombre from videojuegos v inner join tiene t on t.id_video = v.id inner join plataformas p on t.id_plat = p.id where t.id_video =" . $row["v_id"]);
                     ?>
-                    <span class="card" style="width:400px">
+                    <span class="card animacion" style="width:400px">
                         <a href="compra.php?tipo=juegos&id=<?php echo $row["v_id"]?>&plataforma=<?php echo $row["p_id"]?>">
                             <img class="card-img-top" src="<?php if ($row["portada"] == "") {
                                 echo "https://www.stargeek.es/2798-large_default/sudadera-super-mario-bros-bloque-interrogante-.jpg";
@@ -137,6 +137,7 @@ $conso = $mysql->query("SELECT * FROM plataformas");
     <script src="../js/carrito.js"></script>
     <script src="../js/cookies.js"></script>
     <script src="../js/dark.js"></script>
+    <script src="../js/animation.js"></script>
 </body>
 
 </html>

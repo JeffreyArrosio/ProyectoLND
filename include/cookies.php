@@ -5,8 +5,8 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content bg-dark">
             <div class="modal-body p-5">
-                <h2><strong>Uso de GALLETAS </strong><span><img src="../imagenes/galleta.png" alt="" width="100px"
-                            height="100px"></span></h2>
+                <h2><strong>Uso de GALLETAS </strong><span><img src="../imagenes/galleta.png" alt="galleta" width=100
+                            height=100></span></h2>
                 <p>Utilizamos <strong>GALLETAS</strong> en nuestro sitio web para mejorar tu experiencia de usuario. Las
                     <strong>GALLETAS</strong> nos
                     permiten personalizar el contenido y los anuncios, proporcionar funciones de redes sociales y
@@ -23,7 +23,7 @@
             </div>
             <div class="btn-group" id="botones">
                 <button type="button" class="btn btn-secondary" id="galleta" data-bs-dismiss="modal">Aceptar</button>
-                <a href="https://www.youtube.com/watch?v=UWycfSyvp5w" type="button"
+                <a href="https://www.youtube.com/watch?v=UWycfSyvp5w"
                     class="btn btn-secondary">Rechazar</a>
             </div>
         </div>

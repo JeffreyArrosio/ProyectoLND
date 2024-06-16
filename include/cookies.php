@@ -23,8 +23,8 @@
             </div>
             <div class="btn-group" id="botones">
                 <button type="button" class="btn btn-secondary" id="galleta" data-bs-dismiss="modal">Aceptar</button>
-                <a href="https://www.youtube.com/watch?v=UWycfSyvp5w"
-                    class="btn btn-secondary">Rechazar</a>
+                <a href="https://www.youtube.com/watch?v=cQ_b4_lw0Gg"
+                    class="btn btn-secondary" target="_black">Rechazar</a>
             </div>
         </div>
     </div>

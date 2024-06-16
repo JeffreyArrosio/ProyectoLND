@@ -6,7 +6,7 @@ if(sessionStorage.getItem("Cookies") == "false"){
     window.onload = setTimeout(function () {
         var openModalButton = document.getElementById('botonPop')
         openModalButton.click()
-    }, 3000)
+    }, 4000)
 }
 
 const aceptaCookie = document.querySelector("#galleta")

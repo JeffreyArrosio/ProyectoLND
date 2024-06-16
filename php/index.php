@@ -30,6 +30,7 @@ $compo = $mysql->query("SELECT * FROM componentes");
         }
     ?>
     <main class="container-fluid">
+        <?php  include '../include/intro.php'?>
         <?php  include '../include/cookies.php';?>
         <section class="row justify-content-center">
             <h2 class="display-5 text-center">Videojuegos</h2>
@@ -114,6 +115,7 @@ $compo = $mysql->query("SELECT * FROM componentes");
     <script src="../js/carrito.js"></script>
     <script src="../js/cookies.js"></script>
     <script src="../js/dark.js"></script>
+    <script src="../js/intro.js"></script>
 </body>
 
 </html>

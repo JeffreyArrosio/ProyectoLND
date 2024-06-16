@@ -5,6 +5,7 @@ const sCanvas = document.querySelector(".offcanvas")
 const darkTable = document.querySelector("#lista")
 const sCard = document.querySelectorAll(".card")
 const oscuro = document.querySelector("#oscuro")
+const intro = document.querySelector("#autoClose")
 const filtro = document.querySelectorAll("div.nav-item button.dropdown-toggle")
 
 if (localStorage.getItem("dark") === null) {
@@ -72,6 +73,9 @@ function lightTheme() {
                 sBody.style.transition = '0.3s ease'
             })
         }
+        if(intro != undefined){
+            intro.style.color = "white"
+        }
     } else {
         sBody.style.backgroundColor = ""
         sBody.style.transition = '0.3s ease'
@@ -102,6 +106,9 @@ function lightTheme() {
                 filtros.classList.remove("text-dark")
                 filtros.style.transition = '0.3s ease'
             })
+        }
+        if(intro != undefined){
+            intro.style.color = ""
         }
     }
 }

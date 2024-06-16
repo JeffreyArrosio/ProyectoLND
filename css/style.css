@@ -25,6 +25,12 @@ strong {
 h2 {
     color: rgb(4, 159, 48) !important;
 }
+#autoClose{
+    background-color: rgb(1, 8, 0);
+}
+#autoClose div div{
+    background-color: rgb(1, 8, 0);
+}
 
 #cookie {
     background-color: rgb(1, 8, 0);

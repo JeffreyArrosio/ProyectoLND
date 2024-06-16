@@ -1,17 +1,17 @@
 <?php
-    session_start();
-    if(isset($_SESSION["id"])){
-        header("location:index.php");
-        exit();
-    }
-    include "../include/html.php";    
+session_start();
+if (isset($_SESSION["id"])) {
+    header("location:index.php");
+    exit();
+}
+include "../include/html.php";
 ?>
 
 
 <body>
     <main class="form-signin w-50 m-auto container">
-        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-        <form class="text-body" action="../check/check.php?tipo=login" method="post">
+        <h1 class="h3 mb-3 fw-normal">Inicie sesión</h1>
+        <form class="text-body" action="../check/check.php?tipo=login" method="post" onsubmit="validarLogin(event)">
             <div class="form-floating">
                 <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
                 <label for="email">Email</label>
@@ -28,7 +28,7 @@
                 </label>
             </div>
             <button class="btn btn-primary w-50 py-2" type="submit">Log In</button>
-            
+
         </form>
         <a href="index.php"><button class="btn btn-success w-50 py-2 mt-3">Volver</button></a>
         <?php
@@ -52,10 +52,11 @@
         ?>
     </main>
     <?php include "../include/pie.php" ?>
+    <script src="../js/validar.js"></script>
     <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-        <script src="../js/dark.js"></script>
+    <script src="../js/dark.js"></script>
 
 </body>
 

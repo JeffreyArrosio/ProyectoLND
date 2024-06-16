@@ -6,6 +6,7 @@ include "../include/html.php";
 <body>
     <?php include '../include/cabeza.php'; ?>
     <main class="w-75 m-auto container">
+    <?php  include '../include/cookies.php';?>
         <h1 class="display-1 mb-5">Preguntas Frecuentes</h1>
         <ul class="h2">¿Cómo realizo una compra?
             <li>Selecciona el producto que deseas y agrégalo al carrito. Sigue las instrucciones para completar tu compra.</li>
@@ -26,5 +27,6 @@ include "../include/html.php";
 
     </main>
     <?php include "../include/pie.php" ?>
+    <script src="../js/cookies.js"></script>
 </body>
 </html>

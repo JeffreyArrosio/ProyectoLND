@@ -6,6 +6,7 @@ include "../include/html.php";
 <body>
     <?php include '../include/cabeza.php'; ?>
     <main class="w-75 m-auto container">
+    <?php  include '../include/cookies.php';?>
         <h1 class="display-1 mb-5">Encuentra el mejor precio para tu próximo juego o consola
         </h1>
         <ul class="h2">Videojuegos:
@@ -18,11 +19,12 @@ include "../include/html.php";
             <li>Generación anterior: Desde 149.99€</li>
         </ul>
         <ul class="h2">Componentes:
-            <li>Tarjetas gráficas: Desde $XX.XX</li>
-            <li>Procesadores: Desde $XX.XX</li>
-            <li>Otros periféricos: Desde $XX.XX</li>
+            <li>Tarjetas gráficas: Desde 149.99€</li>
+            <li>Procesadores: Desde 149.99€</li>
+            <li>Otros periféricos: Desde 19.99€</li>
         </ul>
     </main>
     <?php include "../include/pie.php" ?>
+    <script src="../js/cookies.js"></script>
 </body>
 </html>

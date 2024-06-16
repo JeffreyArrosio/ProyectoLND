@@ -28,10 +28,9 @@ $cons = $mysql->query("SELECT * FROM plataformas");
                     </tbody>
                 </table>
                 <div class="btn-group-vertical">
-                    <a href="../php/carrito.php" ><button type="button" class="btn btn-outline-success">Confirmar
+                    <a href="../php/carrito.php"><button type="button" class="btn btn-outline-success">Confirmar
                             carrito</button></a>
-                    <a href="" id="borrar"><button type="button"
-                            class="btn btn-outline-danger">Borrar carrito</button></a>
+                    <a href="" id="borrar"><button type="button" class="btn btn-outline-danger">Borrar carrito</button></a>
                     <a href="" id="descargar"><button type="button" class="btn btn-outline-secondary">Descargar
                             carrito</button></a>
                     <a href="" id="cargarEquipo"><button type="button" class="btn btn-outline-primary">Cargar
@@ -47,14 +46,17 @@ $cons = $mysql->query("SELECT * FROM plataformas");
     <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a href="../php/index.php"><img src="../imagenes/videowebo.png" alt="" width="50px" height="50px"></a>
-            <span class="display-5"><a class="text-decoration-none text-light" href="../php/index.php">IDEOWEBOS</a></span>
+            <span class="display-5"><a class="text-decoration-none text-light"
+                    href="../php/index.php">IDEOWEBOS</a></span>
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                 <li><a href="../Header/Home.php" class="nav-link px-2 text-secondary">Home</a></li>
                 <li><a href="../Header/Features.php" class="nav-link px-2 text-white">Features</a></li>
                 <li><a href="../Header/Pricing.php" class="nav-link px-2 text-white">Pricing</a></li>
                 <li><a href="../Header/FAQ.php" class="nav-link px-2 text-white">FAQs</a></li>
                 <li><a href="../Header/About.php" class="nav-link px-2 text-white">About</a></li>
+                <li><img src="../imagenes/luna.png" alt="" id="oscuro" width=40 height=40></li>
             </ul>
+
             <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
                 <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..."
                     aria-label="Search">
@@ -85,8 +87,8 @@ $cons = $mysql->query("SELECT * FROM plataformas");
                             <button type="button" class="btn  btn-outline-success  dropdown-toggle text-decoration-none"
                                 data-bs-toggle="dropdown" aria-expanded="false"><?php echo $usu["nombre"] ?></button>
                             <ul class="dropdown-menu">
-                                <li><button class="dropdown-item btn" data-bs-toggle="offcanvas"
-                                        data-bs-target="#carro">Carrito <span class="badge bg-success" id="numero"></span></button></li>
+                                <li><button class="dropdown-item btn" data-bs-toggle="offcanvas" data-bs-target="#carro">Carrito
+                                        <span class="badge bg-success" id="numero"></span></button></li>
                                 <li class="d-grid gap-2">
                                     <a class="text-decoration-none text-light" href="../php/logout.php"><button type="button"
                                             class="btn btn-danger "><svg xmlns="http://www.w3.org/2000/svg" width="16"

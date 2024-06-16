@@ -6,9 +6,10 @@ include "../include/html.php";
 <body>
     <?php include '../include/cabeza.php'; ?>
     <main class="w-75 m-auto container">
-        <h1 class="display-1 mb-5">Sobre Videowebos.com</h1>
-        <p class="h2">En [Nombre de la tienda], somos apasionados por los videojuegos y la tecnología. Desde nuestro
-            inicio en [año de fundación], hemos trabajado arduamente para ofrecer la mejor selección de productos y una
+    <?php  include '../include/cookies.php';?>
+        <h1 class="display-1 mb-5">Sobre <strong>VIDEOWEBOS.com</strong></h1>
+        <p class="h2">En <strong>VIDEOWEBOS.com</strong>, somos apasionados por los videojuegos y la tecnología. Desde nuestro
+            inicio en 2024, hemos trabajado arduamente para ofrecer la mejor selección de productos y una
             experiencia de compra excepcional. Nuestro equipo está compuesto por gamers y expertos en tecnología que
             entienden tus necesidades y están aquí para ayudarte a encontrar exactamente lo que buscas.</p>
         <ul class="h2">
@@ -19,5 +20,7 @@ include "../include/html.php";
         </ul>
     </main>
     <?php include "../include/pie.php" ?>
+    <script src="../js/cookies.js"></script>
+
 </body>
 </html>

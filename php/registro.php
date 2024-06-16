@@ -9,7 +9,7 @@ include "../include/html.php";
 
 
 <body>
-    <main class="form-signin w-50 m-auto container">
+    <main class="form-signin w-75 m-auto container">
         <h1 class="h3 mb-3 fw-normal">Registrarse</h1>
         <form class="text-body" action="../check/check.php?tipo=signin" method="post" onsubmit="validar(event)">
             <div class="form-floating">

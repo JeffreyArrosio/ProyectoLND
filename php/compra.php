@@ -26,6 +26,7 @@ include "../include/html.php";
 <body>
     <?php include '../include/cabeza.php'; ?>
     <main class="container-fluid">
+    <?php  include '../include/cookies.php';?>
         <section class="row justify-content-center" id="producto">
             <h2 class="display-1 text-center"><?php echo $row["titulo"] ?></h2>
             <span class="card mb-5" style="width:800px" >
@@ -91,6 +92,7 @@ include "../include/html.php";
     </main>
     <?php include "../include/pie.php" ?>
     <script src="../js/carrito.js"></script>
+    <script src="../js/cookies.js"></script>
 </body>
 
 </html>

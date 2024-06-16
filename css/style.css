@@ -3,6 +3,7 @@ body {
     height: 100%;
     margin: 0;
     background-color: rgb(32, 0, 64);
+
 }
 
 body {
@@ -15,9 +16,23 @@ main {
     color: white;
 }
 
+strong{
+    color: rgb(5, 243, 73) !important;
+}
 h2 {
     color: rgb(5, 243, 73) !important;
 }
+#cookie{
+    background-color: rgb(32, 0, 64);
+}
+#botones{
+    bottom: 0px;
+}
+.modal-content{
+    min-height: 400px;
+    width: 100%;
+}
+
 
 .offcanvas-end {
     width: 50% !important;
@@ -28,6 +43,7 @@ h2 {
         width: 75% !important;
     }
 }
+
 @media (max-width: 576px) {
     .offcanvas-end {
         width: 95% !important;

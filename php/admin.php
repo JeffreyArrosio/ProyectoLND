@@ -50,6 +50,7 @@ $compo = $mysql->query("SELECT * FROM componentes");
     }
     ?>
     <main class="container-fluid">
+        <?php include '../include/cookies.php'; ?>
         <section class="row justify-content-center">
             <div class="text-center mb-3 mt-3">
                 <h2 class="display-5 text-center">Videojuegos</h2>
@@ -84,7 +85,8 @@ $compo = $mysql->query("SELECT * FROM componentes");
                             <div class="btn-group d-flex justify-content-center">
                                 <a href="vista.php?tipo=juegos&id=<?php echo $row["v_id"] ?>"><button type="button"
                                         class="btn btn-success">Ver</button></a>
-                                <a href="modificar.php?tipo=juegos&id=<?php echo $row["v_id"] ?>"><button type="button" class="btn btn-warning">Modificar</button></a>
+                                <a href="modificar.php?tipo=juegos&id=<?php echo $row["v_id"] ?>"><button type="button"
+                                        class="btn btn-warning">Modificar</button></a>
                                 <a href="borrar.php?tipo=juegos&id=<?php echo $row["v_id"] ?>"><button type="button"
                                         class="btn btn-danger">Borrar</button></a>
                             </div>
@@ -194,6 +196,7 @@ $compo = $mysql->query("SELECT * FROM componentes");
         </section>
     </main>
     <?php include "../include/pie.php" ?>
+    <script href="../js/cookies.js"></script>
 </body>
 
 </html>

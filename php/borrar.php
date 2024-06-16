@@ -33,7 +33,7 @@ include "../include/html.php";
 
 <body>
     <?php include '../include/cabeza.php'; ?>
-    <main class="container text-center">
+    <main class=" w-75 m-auto container">
         <h1 class="display-1 mb-3">¿Estás seguro de borrar el siguiente elemento: <?php 
         if($tipo== "juegos"){
             echo $registro["titulo"];

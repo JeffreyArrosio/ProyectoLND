@@ -22,6 +22,7 @@ if (!isset($_GET["filtro"])) {
 <body>
     <?php include '../include/cabeza.php'; ?>
     <main class="container-fluid" data-bs-theme="dark">
+        <?php include '../include/cookies.php'; ?>
         <div class="nav-item dropdown text-center">
             <button class="dropdown-toggle btn text-light" href="juegos.php" data-bs-toggle="dropdown"
                 aria-expanded="false">Ordenar por: </button>
@@ -56,6 +57,7 @@ if (!isset($_GET["filtro"])) {
         </section>
         <?php include "../include/pie.php" ?>
         <script src="../js/carrito.js"></script>
+        <script src="../js/cookies.js"></script>
 </body>
 
 </html>

@@ -46,14 +46,14 @@ $cons = $mysql->query("SELECT * FROM plataformas");
     ?>
     <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a href="index.php"><img src="../imagenes/videowebo.png" alt="" width="50px" height="50px"></a>
-            <span class="display-5"><a class="text-decoration-none text-light" href="index.php">IDEOWEBOS</a></span>
+            <a href="../php/index.php"><img src="../imagenes/videowebo.png" alt="" width="50px" height="50px"></a>
+            <span class="display-5"><a class="text-decoration-none text-light" href="../php/index.php">IDEOWEBOS</a></span>
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+                <li><a href="../Header/Home.php" class="nav-link px-2 text-secondary">Home</a></li>
+                <li><a href="../Header/Features.php" class="nav-link px-2 text-white">Features</a></li>
+                <li><a href="../Header/Pricing.php" class="nav-link px-2 text-white">Pricing</a></li>
+                <li><a href="../Header/FAQ.php" class="nav-link px-2 text-white">FAQs</a></li>
+                <li><a href="../Header/About.php" class="nav-link px-2 text-white">About</a></li>
             </ul>
             <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
                 <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..."
@@ -68,10 +68,10 @@ $cons = $mysql->query("SELECT * FROM plataformas");
                     <?php
                     if ($usu["tipo"] != "cliente") {
                         ?>
-                        <a href="admin.php"><button type="button" class="btn btn-outline-light me-2"><?php
+                        <a href="../php/admin.php"><button type="button" class="btn btn-outline-light me-2"><?php
                         echo $usu["nombre"] . " (Zona " . $usu["tipo"] . ")";
                         ?></button></a>
-                        <a href="logout.php"><button type="button" class="btn btn-danger"><svg
+                        <a href="../php/logout.php"><button type="button" class="btn btn-danger"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-power" viewBox="0 0 16 16">
                                     <path d="M7.5 1v7h1V1z" />
@@ -88,7 +88,7 @@ $cons = $mysql->query("SELECT * FROM plataformas");
                                 <li><button class="dropdown-item btn" data-bs-toggle="offcanvas"
                                         data-bs-target="#carro">Carrito <span class="badge bg-success" id="numero"></span></button></li>
                                 <li class="d-grid gap-2">
-                                    <a class="text-decoration-none text-light" href="logout.php"><button type="button"
+                                    <a class="text-decoration-none text-light" href="../php/logout.php"><button type="button"
                                             class="btn btn-danger "><svg xmlns="http://www.w3.org/2000/svg" width="16"
                                                 height="16" fill="currentColor" class="bi bi-power" viewBox="0 0 16 16">
                                                 <path d="M7.5 1v7h1V1z" />
@@ -107,8 +107,8 @@ $cons = $mysql->query("SELECT * FROM plataformas");
             } else {
                 ?>
                 <div class="text-end">
-                    <a href="login.php"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
-                    <a href="registro.php"><button type="button" class="btn btn-success">Sign-up</button></a>
+                    <a href="../php/login.php"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
+                    <a href="../php/registro.php"><button type="button" class="btn btn-success">Sign-up</button></a>
                 </div>
                 <?php
             }
@@ -119,7 +119,7 @@ $cons = $mysql->query("SELECT * FROM plataformas");
 <nav class="navbar navbar-expand-lg bg-body-tertiary rounded mb-3" data-bs-theme="dark"
     aria-label="Eleventh navbar example">
     <div class="container-fluid ">
-        <a class="navbar-brand" href="index.php">HOME</a>
+        <a class="navbar-brand" href="../php/index.php">HOME</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09"
             aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -127,21 +127,21 @@ $cons = $mysql->query("SELECT * FROM plataformas");
         <div class="collapse navbar-collapse" id="navbarsExample09">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="consolas.php">Plataformas</a>
+                    <a class="nav-link" href="../php/consolas.php">Plataformas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="componentes.php">Componentes</a>
+                    <a class="nav-link" href="../php/componentes.php">Componentes</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="juegos.php" data-bs-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle" href="../php/juegos.php" data-bs-toggle="dropdown"
                         aria-expanded="false">Videojuegos</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="juegos.php">Todas</a></li>
+                        <li><a class="dropdown-item" href="../php/juegos.php">Todas</a></li>
                         <?php
                         while ($li = $cons->fetch_assoc()) {
                             ?>
                             <li><a class="dropdown-item"
-                                    href="juegos.php?plataforma=<?php echo $li["nombre"] ?>"><?php echo $li["nombre"] ?></a>
+                                    href="../php/juegos.php?plataforma=<?php echo $li["nombre"] ?>"><?php echo $li["nombre"] ?></a>
                             </li>
                             <?php
                         }

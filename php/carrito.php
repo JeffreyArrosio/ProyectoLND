@@ -15,7 +15,7 @@ include "../include/html.php";
 ?>
 
 <body>
-    <main class="container mt-3">
+    <main class="w-75 m-auto container mt-3">
         <div id="factura">
 
         </div>

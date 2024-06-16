@@ -44,6 +44,7 @@ include "../include/html.php";
 <body>
     <?php include '../include/cabeza.php'; ?>
     <main class="container-fluid">
+    <?php  include '../include/cookies.php';?>
         <section class="row justify-content-center" id="producto">
             <?php
             switch ($tipo) {
@@ -204,6 +205,7 @@ include "../include/html.php";
     </main>
     <?php include "../include/pie.php" ?>
     <script src="../js/carrito.js"></script>
+    <script src="../js/cookies.js"></script>
 </body>
 
 </html>
